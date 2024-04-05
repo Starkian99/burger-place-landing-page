@@ -1,0 +1,436 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Burger Place - Home</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+ {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #111; 
+    color: #fff;
+}
+
+.container {
+    width: 90%;
+    margin: 0 auto;
+    max-width: 1200px;
+}
+
+.dark-header {
+    background-color: #333;
+    padding: 20px 0;
+}
+
+.dark-header .logo {
+    color: #fff; 
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+
+.dark-header nav ul {
+    list-style: none;
+}
+
+.dark-header nav ul li {
+    display: inline;
+    margin-right: 20px;
+}
+
+.dark-header nav ul li a {
+    color: #fff; 
+    text-decoration: none;
+    font-size: 1.1rem;
+}
+
+.dark-header nav ul li a:hover {
+    color: #ffd700; 
+}
+
+.dark-hero {
+    background-image: url('hero-background.jpg'); 
+    background-size: cover;
+    background-position: center;
+    color: #fff; 
+    padding: 50px 0; 
+    text-align: center;
+}
+
+.dark-hero h2 {
+    font-size: 3rem;
+    margin-bottom: 20px;
+}
+
+.dark-hero p {
+    font-size: 1.2rem;
+    margin-bottom: 30px;
+}
+
+.dark-hero .btn {
+    background-color: #ffd700; 
+    color: #333; 
+    padding: 10px 20px;
+    font-size: 1.1rem;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background-color 0.3s ease-in-out;
+}
+
+.dark-hero .btn:hover {
+    background-color: #f7ca18; 
+}
+
+.dark-section {
+    padding: 100px 0;
+    text-align: center;
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+.dark-section h2 {
+    font-size: 3rem;
+    margin-bottom: 20px;
+}
+
+
+.dark-menu {
+    background-color: #222; 
+    color: #fff; 
+    padding: 100px 0; 
+    text-align: center;
+}
+
+.dark-menu h2 {
+    font-size: 3rem;
+    margin-bottom: 20px;
+}
+
+.menu-items {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin-top: 30px;
+}
+
+.menu-item {
+    width: 300px;
+    margin: 20px;
+    padding: 20px;
+    background-color: #333;
+    border-radius: 10px;
+}
+
+.menu-item img {
+    width: 100%;
+    border-radius: 10px;
+    margin-bottom: 10px;
+}
+
+.menu-item h3 {
+    font-size: 1.5rem;
+}
+
+.menu-item p {
+    font-size: 1.2rem;
+    margin-bottom: 10px;
+}
+
+.menu-item .price {
+    font-size: 1.2rem;
+    font-weight: bold;
+    color: #ffd700; 
+}
+
+.dark-about {
+    background-image: url('about-background.jpg'); 
+    background-size: cover;
+    background-position: center;
+    color: #fff; 
+    padding: 100px 10; 
+    text-align: center;
+}
+
+.dark-about h2 {
+    font-size: 3rem;
+    margin-bottom: 20px;
+}
+
+.about-content {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.about-content p {
+    font-size: 1.2rem;
+    line-height: 1.6;
+    margin-bottom: 30px;
+}
+
+
+.dark-contact {
+    background-color: #222; 
+    color: #fff; 
+    padding: 100px 0; 
+    text-align: center;
+}
+
+.dark-contact h2 {
+    font-size: 3rem;
+    margin-bottom: 20px;
+}
+
+.contact-form input,
+.contact-form textarea {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 20px;
+    border: none;
+    border-radius: 5px;
+    background-color: #333; /* Dark background color for input fields */
+    color: #fff; /* White text color for input fields */
+}
+
+.contact-form textarea {
+    height: 150px; /* Adjust height of the textarea */
+}
+
+.contact-form .btn {
+    background-color: #ffd700; /* Yellow button color */
+    color: #333; /* Dark text color */
+    padding: 10px 20px;
+    font-size: 1.1rem;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease-in-out;
+}
+
+.contact-form .btn:hover {
+    background-color: #f7ca18; /* Darker yellow button color on hover */
+}
+
+.contact-info {
+    margin-top: 50px;
+}
+
+.contact-info p {
+    font-size: 1.2rem;
+    margin-bottom: 5px;
+}
+
+.contact-info address,
+.contact-info a {
+    color: #fff; /* White text color for contact information */
+}
+
+.dark-footer {
+    background-color: #222; /* Dark background color for the footer */
+    color: #fff; /* White text color */
+    padding: 20px 0; /* Adjust padding as needed */
+    text-align: center;
+}
+
+.dark-footer .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.dark-footer ul {
+    list-style: none;
+    padding: 0;
+}
+
+.dark-footer ul li {
+    display: inline;
+    margin-right: 20px;
+}
+
+.dark-footer ul li:last-child {
+    margin-right: 0;
+}
+
+.dark-footer a {
+    color: #fff; /* White text color for footer links */
+    text-decoration: none;
+}
+
+.dark-footer a:hover {
+    text-decoration: underline;
+}
+
+.dark-footer p {
+    font-size: 0.9rem;
+}
+
+.dark-footer p a {
+    color: #ffd700; /* Yellow link color */
+}
+.dark-reservation {
+    background-color: #222; /* Dark background color for the reservation section */
+    color: #fff; /* White text color */
+    padding: 100px 0; /* Adjust padding as needed */
+    text-align: center;
+}
+
+.dark-reservation h2 {
+    font-size: 3rem;
+    margin-bottom: 20px;
+}
+
+.reservation-form {
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+.reservation-form input,
+.reservation-form select {
+    width: calc(50% - 10px);
+    padding: 10px;
+    margin: 10px 5px;
+    border: none;
+    border-radius: 5px;
+    background-color: #333; /* Dark background color for input fields */
+    color: #fff; /* White text color for input fields */
+}
+
+.reservation-form button {
+    width: 100%;
+    padding: 10px;
+    margin-top: 20px;
+    border: none;
+    border-radius: 5px;
+    background-color: #ffd700; /* Yellow button color */
+    color: #333; /* Dark text color */
+    font-size: 1.1rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease-in-out;
+}
+
+.reservation-form button:hover {
+    background-color: #f7ca18; /* Darker yellow button color on hover */
+}
+
+</style>
+</head>
+<body>
+    <header class="dark-header">
+        <div class="container">
+            <img src="logo.jpg" alt="Burger Hut Logo" class="logo">
+            <nav>
+                <ul>
+                    <li><a href="#menu">Menu</a></li>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                    <li><a href="#reservation">Reservation</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <section class="dark-hero">
+        <div class="container">
+            <h2>Welcome to Burger Place</h2>
+            <p>Discover our mouthwatering selection of burgers crafted with the finest ingredients.</p>
+            <a href="#menu" class="btn">View Menu</a>
+        </div>
+    </section>
+
+    <section id="menu" class="dark-menu">
+        <div class="container">
+            <h2>Our Menu</h2>
+            <div class="menu-items">
+                <div class="menu-item">
+                    <img src="burger1.jpg" alt="Burger 1">
+                    <h3>Classic Burger</h3>
+                    <p>A juicy beef patty with lettuce, tomato, onion, and our special sauce.</p>
+                    <span class="price">$9.99</span>
+                </div>
+                <div class="menu-item">
+                    <img src="burger2.jpg" alt="Burger 2">
+                    <h3>Cheeseburger Deluxe</h3>
+                    <p>Our classic burger topped with melted cheese, bacon, and pickles.</p>
+                    <span class="price">$11.99</span>
+                </div>
+                <div class="menu-item">
+                    <img src="burger3.jpg" alt="Burger 3">
+                    <h3>Spicy Chicken Sandwich</h3>
+                    <p>Spicy fried chicken breast, pepper jack cheese, jalapenos, lettuce, chipotle mayo, fries</p>
+                    <span class="price">$12.99</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="about" class="dark-about">
+        <div class="container">
+            <h2>About Burger Place</h2>
+            <div class="about-content">
+                <p>Welcome to Burger Place, where we are passionate about crafting the most delicious burgers you've ever tasted. Our journey began with a simple idea: to create mouthwatering burgers using only the finest ingredients and recipes passed down through generations.</p>
+                <p>At Burger Place, we believe in quality, flavor, and satisfaction. Each burger is made with love and attention to detail, ensuring that every bite is an unforgettable experience. Whether you're craving a classic burger or feeling adventurous with our specialty options, we've got something for everyone.</p>
+                <p>Come join us and indulge in a burger experience like no other. We can't wait to serve you!</p>
+            </div>
+        </div>
+    </section>
+    <section id="reservation" class="dark-reservation"> 
+        <div class="container">
+            <h2>Make a Reservation</h2>
+            <div class="reservation-form">
+                <form action="#" method="post">
+                    <input type="text" name="name" placeholder="Your Name" required>
+                    <input type="email" name="email" placeholder="Your Email" required>
+                    <input type="date" name="date" required>
+                    <input type="time" name="time" required>
+                    <input type="number" name="guests" placeholder="Number of Guests" required>
+                    <button type="submit" class="btn">Make Reservation</button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <section id="contact" class="dark-contact">
+        <div class="container">
+            <h2>Contact Us</h2>
+            <div class="contact-form">
+                <form action="#" method="post">
+                    <input type="text" name="name" placeholder="Your Name" required>
+                    <input type="email" name="email" placeholder="Your Email" required>
+                    <textarea name="message" placeholder="Your Message" required></textarea>
+                    <button type="submit" class="btn">Send Message</button>
+                </form>
+            </div>
+            <div class="contact-info">
+                <p>Visit us at:</p>
+                <address>123 Burger Street, starkville</address>
+                <p>Call us:</p>
+                <a href="tel:+254743100847">+(254) 7431-00 847</a>
+                <p>Email us:</p>
+                <a href="mailto:info@burgerhut.com">info@burgerplace.com</a>
+            </div>
+        </div>
+    </section>
+
+    <footer class="dark-footer">
+        <div class="container">
+            <div class="footer-links">
+                <ul>
+                    <li><a href="#menu">Menu</a></li>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                    <li><a href="#reservation">Reservation</a></li>
+                </ul>
+            </div>
+            <div class="footer-info">
+                <p>&copy; 2024 Burger Place. All rights reserved.</p>
+                <p><a href="privacy.html">Privacy Policy</a> | <a href="terms.html">Terms of Service</a></p>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>
